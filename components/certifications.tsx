@@ -43,14 +43,14 @@ export function Certifications() {
               ))}
             </div>
             {certification.url && (
-              <Link
+              <a
                 href={certification.url}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-5 inline-block text-sm font-semibold text-primary hover:text-primary/70"
               >
                 View credential
-              </Link>
+              </a>
             )}
           </motion.article>
         ))}
