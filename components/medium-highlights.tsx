@@ -44,14 +44,9 @@ export function MediumHighlights() {
                 <div className="mt-4 flex items-center gap-6 text-xs text-slate-400">
                   <span>{article.views} views</span>
                   <span>{article.reads} reads</span>
-                  <Link
-                    href={article.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-primary hover:text-primary/70"
-                  >
+                  <a href={article.url} target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary/70">
                     Read
-                  </Link>
+                  </a>
                 </div>
               </motion.article>
             ))}

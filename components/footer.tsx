@@ -8,20 +8,15 @@ export function Footer() {
           © {new Date().getFullYear()} Ayoub El Maalmi.
         </p>
         <div className="flex flex-wrap gap-4 text-slate-400">
-          <Link href="https://github.com/ELMAALMIA" target="_blank" rel="noopener noreferrer" className="hover:text-white">
+          <a href="https://github.com/ELMAALMIA" target="_blank" rel="noopener noreferrer" className="hover:text-white">
             GitHub
-          </Link>
-          <Link
-            href="https://www.linkedin.com/in/ayoub-el-maalmi-8b274a1a1/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-white"
-          >
+          </a>
+          <a href="https://www.linkedin.com/in/ayoub-el-maalmi-8b274a1a1/" target="_blank" rel="noopener noreferrer" className="hover:text-white">
             LinkedIn
-          </Link>
-          <Link href="https://medium.com/@ayoubelmaalmi" target="_blank" rel="noopener noreferrer" className="hover:text-white">
+          </a>
+          <a href="https://medium.com/@ayoubelmaalmi" target="_blank" rel="noopener noreferrer" className="hover:text-white">
             Medium
-          </Link>
+          </a>
         </div>
       </div>
     </footer>

@@ -51,7 +51,7 @@ export function ProjectShowcase() {
               {project.links.length > 0 && (
                 <div className="mt-5 flex flex-wrap gap-3">
                   {project.links.map((link) => (
-                    <Link
+                    <a
                       key={link.href}
                       href={link.href}
                       target="_blank"
@@ -60,7 +60,7 @@ export function ProjectShowcase() {
                     >
                       {link.label}
                       <ExternalLink className="h-4 w-4" />
-                    </Link>
+                    </a>
                   ))}
                 </div>
               )}

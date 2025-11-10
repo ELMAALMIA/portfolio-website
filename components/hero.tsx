@@ -39,18 +39,18 @@ export function Hero() {
                 <ContactPill icon={<MapPin className="h-4 w-4" />} label={hero.contact.location} />
               </div>
               <div className="mt-10 flex flex-wrap gap-4">
-                {hero.socials.map((social) => (
-                  <Link
-                    key={social.label}
-                    href={social.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="group inline-flex items-center gap-2 rounded-full border border-slate-700/80 px-5 py-2 text-sm font-semibold text-slate-200 transition hover:border-primary hover:text-primary-foreground hover:shadow-glow"
-                  >
-                    {social.label}
-                    <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
-                  </Link>
-                ))}
+              {hero.socials.map((social) => (
+                <a
+                  key={social.label}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group inline-flex items-center gap-2 rounded-full border border-slate-700/80 px-5 py-2 text-sm font-semibold text-slate-200 transition hover:border-primary hover:text-primary-foreground hover:shadow-glow"
+                >
+                  {social.label}
+                  <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
+                </a>
+              ))}
               </div>
             </div>
           </div>
@@ -105,9 +105,12 @@ function ContactPill({ icon, label, href }: ContactPillProps) {
   if (!href) return content;
 
   return (
-    <Link href={href} className="hover:scale-[1.02] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary">
+    <a
+      href={href}
+      className="hover:scale-[1.02] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+    >
       {content}
-    </Link>
+    </a>
   );
 }
 
