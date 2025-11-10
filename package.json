@@ -8,6 +8,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "deploy": "next build && next export",
     "format": "prettier --write ."
   },
   "dependencies": {
