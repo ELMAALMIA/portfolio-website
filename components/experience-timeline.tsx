@@ -12,7 +12,7 @@ export function ExperienceTimeline() {
           <Briefcase className="h-5 w-5 text-primary" /> Experience
         </span>
         <h2 className="font-heading text-3xl text-white md:text-4xl">Shipping reliable systems with measurable outcomes</h2>
-        <p className="max-w-2xl text-slate-300">
+        <p className="max-w-2xl text-slate-200">
           From cloud automation at Oracle to AI-first customer solutions, every project blends resilience, observability, and
           product thinking.
         </p>
@@ -28,27 +28,28 @@ export function ExperienceTimeline() {
             className="mb-14 last:mb-0"
           >
             <div className="absolute -left-[13px] mt-2 h-3 w-3 rounded-full bg-primary" />
-            <div className="glass rounded-3xl border border-slate-800/70 p-6">
+            <div className="glass rounded-3xl border border-slate-700/50 p-6">
               <div className="flex flex-wrap items-center justify-between gap-3">
                 <div>
-                  <h3 className="font-heading text-xl text-white">{experience.role}</h3>
-                  <p className="text-sm text-slate-400">{experience.company}</p>
+                  <h3 className="font-heading text-xl text-white">{experience.company}</h3>
+                  <p className="text-sm text-slate-400 mt-1">{experience.role}</p>
                 </div>
                 <div className="text-right text-sm text-slate-400">
-                  <p>{experience.period}</p>
+                  <p className="font-medium">{experience.period}</p>
                   <p>{experience.location}</p>
                 </div>
               </div>
-              <ul className="mt-4 space-y-2 text-sm text-slate-300">
+              <ul className="mt-4 space-y-3 text-sm text-slate-200">
                 {experience.achievements.map((achievement) => (
-                  <li key={achievement} className="leading-relaxed">
-                    {achievement}
+                  <li key={achievement} className="flex items-start gap-3 leading-relaxed">
+                    <span className="text-primary mt-1">▸</span>
+                    <span>{achievement}</span>
                   </li>
                 ))}
               </ul>
-              <div className="mt-4 flex flex-wrap gap-2 text-xs font-medium text-slate-200">
+              <div className="mt-5 flex flex-wrap gap-2 text-xs font-medium">
                 {experience.stack.map((tech) => (
-                  <span key={tech} className="rounded-full border border-slate-700 px-3 py-1">
+                  <span key={tech} className="rounded-full border border-primary/30 bg-primary/10 px-3 py-1.5 text-primary-foreground">
                     {tech}
                   </span>
                 ))}

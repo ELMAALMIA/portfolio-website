@@ -13,7 +13,7 @@ export function Certifications() {
           <Award className="h-5 w-5 text-primary" /> Certifications
         </span>
         <h2 className="font-heading text-3xl text-white md:text-4xl">Continuous learning and technical depth</h2>
-        <p className="max-w-2xl text-slate-300">
+        <p className="max-w-2xl text-slate-200">
           Credentials that validate my approach to cloud, DevOps, and Java craftsmanship while keeping solutions audit-ready.
         </p>
       </header>
@@ -25,11 +25,11 @@ export function Certifications() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.4 }}
-            className="glass rounded-3xl border border-slate-800/60 p-5"
+            className="glass rounded-3xl border border-slate-700/50 p-5"
           >
             <header>
               <h3 className="font-heading text-lg text-white">{certification.title}</h3>
-              <p className="text-sm text-slate-400">{certification.issuer}</p>
+              <p className="text-sm text-slate-300">{certification.issuer}</p>
             </header>
             <div className="mt-3 flex items-center gap-4 text-xs text-slate-500">
               <span>Issued: {certification.issued}</span>

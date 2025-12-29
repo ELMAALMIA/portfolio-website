@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { hero } from "@/lib/data";
-import { Mail, MapPin, Phone, ArrowUpRight } from "lucide-react";
+import { Mail, MapPin, Phone, ArrowUpRight, Download } from "lucide-react";
 import Link from "next/link";
 import { HeroVisual } from "@/components/hero-visual";
 
@@ -30,31 +30,48 @@ export function Hero() {
             <div className="rounded-[calc(theme(borderRadius.3xl)-4px)] bg-slate-950/70 p-8 lg:p-10">
               <span className="font-heading text-sm uppercase tracking-[0.4em] text-slate-400">Ayoub El Maalmi</span>
               <h1 className="mt-6 font-heading text-4xl leading-tight text-white md:text-5xl lg:text-[3.2rem]">
-                Designing intelligent platforms that feel effortless to operate.
+                Software Engineer
               </h1>
-              <p className="mt-6 max-w-2xl text-lg text-slate-300">{hero.summary}</p>
+              <p className="mt-3 text-xl font-medium text-slate-200">
+                Java • Spring Boot • Angular • Enterprise Systems
+              </p>
+              <p className="mt-6 max-w-2xl text-lg leading-relaxed text-slate-200">
+                Full-stack engineer specializing in Java/Spring Boot backends, Angular frontends, 
+                and cloud-native architectures. Building production-ready systems with measurable impact 
+                at Oracle, freelance clients, and enterprise environments.
+              </p>
               <div className="mt-8 flex flex-wrap gap-4">
                 <ContactPill icon={<Mail className="h-4 w-4" />} label={hero.contact.email} href="mailto:elmaalmiayoub@gmail.com" />
                 <ContactPill icon={<Phone className="h-4 w-4" />} label={hero.contact.phone} href="tel:+212616242462" />
                 <ContactPill icon={<MapPin className="h-4 w-4" />} label={hero.contact.location} />
               </div>
               <div className="mt-10 flex flex-wrap gap-4">
-              {hero.socials.map((social) => (
                 <a
-                  key={social.label}
-                  href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group inline-flex items-center gap-2 rounded-full border border-slate-700/80 px-5 py-2 text-sm font-semibold text-slate-200 transition hover:border-primary hover:text-primary-foreground hover:shadow-glow"
+                  href={hero.cvUrl || "/cv.pdf"}
+                  download
+                  className="group inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground transition hover:bg-primary/90 hover:shadow-glow"
                 >
-                  {social.label}
-                  <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
+                  <Download className="h-4 w-4" />
+                  Download CV
                 </a>
-              ))}
+                {hero.socials.map((social) => (
+                  <a
+                    key={social.label}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group inline-flex items-center gap-2 rounded-full border border-slate-700/80 px-5 py-2 text-sm font-semibold text-slate-200 transition hover:border-primary hover:text-primary-foreground hover:shadow-glow"
+                  >
+                    {social.label}
+                    <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
+                  </a>
+                ))}
               </div>
             </div>
           </div>
-          <HeroVisual />
+          <div className="hidden lg:block">
+            <HeroVisual />
+          </div>
         </div>
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
@@ -63,26 +80,26 @@ export function Hero() {
           className="grid w-full gap-4 md:grid-cols-3"
         >
           <StatCard
-            label="Automation impact"
-            value="75% faster reporting"
-            description="Dropwizard + Jenkins stack delivering OCI insights on demand."
+            label="Enterprise Experience"
+            value="Oracle • Upwork • Production Systems"
+            description="Java/Spring Boot, OCI automation, CI/CD pipelines"
           />
           <StatCard
-            label="Knowledge shared"
-            value="600+ engaged readers"
-            description="Medium deep dives on Java debugging and hexagonal architecture."
+            label="Core Stack"
+            value="Java • Spring • Angular • Cloud"
+            description="Backend-first with full-stack capabilities"
           />
           <StatCard
-            label="Tech orchestration"
-            value="AI × DevOps × Cloud"
-            description="LLM integrations, CI/CD pipelines, and resilient infrastructure."
+            label="Production Impact"
+            value="75% faster • 35% optimization"
+            description="Measurable improvements in automation and performance"
           />
         </motion.div>
       </motion.div>
       <div className="pointer-events-none absolute inset-0 -z-10">
-        <div className="absolute left-1/2 top-1/3 h-[480px] w-[480px] -translate-x-1/2 rounded-full bg-primary/35 blur-[200px]" />
-        <div className="absolute left-10 top-1/2 h-[360px] w-[360px] rounded-full bg-accent/35 blur-[200px]" />
-        <div className="absolute right-8 top-[20%] h-[260px] w-[260px] rounded-full bg-emerald-500/20 blur-[180px]" />
+        <div className="absolute left-1/2 top-1/3 h-[480px] w-[480px] -translate-x-1/2 rounded-full bg-primary/15 blur-[200px]" />
+        <div className="absolute left-10 top-1/2 h-[360px] w-[360px] rounded-full bg-accent/12 blur-[200px]" />
+        <div className="absolute right-8 top-[20%] h-[260px] w-[260px] rounded-full bg-primary/10 blur-[180px]" />
       </div>
     </section>
   );
@@ -124,10 +141,10 @@ function StatCard({
   description: string;
 }) {
   return (
-    <div className="glass flex flex-col rounded-3xl border border-slate-800/50 bg-slate-900/50 p-6 transition hover:-translate-y-1 hover:shadow-glow">
-      <p className="text-sm uppercase tracking-[0.2em] text-slate-400">{label}</p>
+    <div className="glass flex flex-col rounded-3xl border border-slate-700/50 bg-slate-900/50 p-6 transition hover:-translate-y-1 hover:shadow-glow">
+      <p className="text-sm uppercase tracking-[0.2em] text-slate-300">{label}</p>
       <p className="mt-4 font-heading text-2xl text-white">{value}</p>
-      <p className="mt-3 text-sm text-slate-400">{description}</p>
+      <p className="mt-3 text-sm text-slate-200">{description}</p>
     </div>
   );
 }

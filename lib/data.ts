@@ -45,6 +45,7 @@ export const hero = {
     phone: "+212 6 16 24 24 62",
     location: "Meknes, Morocco"
   },
+  cvUrl: "/cv.pdf", // Add your CV file to the public folder
   socials: [
     { label: "LinkedIn", href: "https://www.linkedin.com/in/ayoub-el-maalmi-8b274a1a1/" },
     { label: "GitHub", href: "https://github.com/ELMAALMIA" },

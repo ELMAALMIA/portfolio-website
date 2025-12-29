@@ -13,7 +13,7 @@ import { motion } from "framer-motion";
 
 export default function Home() {
   return (
-    <main className="relative flex flex-col gap-10 pb-12">
+    <main className="relative flex flex-col gap-16 pb-12">
       <Hero />
       <motion.hr
         className="mx-auto h-px w-full max-w-5xl border-0 bg-gradient-to-r from-transparent via-slate-700 to-transparent"
@@ -22,10 +22,10 @@ export default function Home() {
         transition={{ delay: 0.4, duration: 0.8 }}
       />
       <ExperienceTimeline />
-      <SkillRadar />
       <ProjectShowcase />
-      <MediumHighlights />
+      <SkillRadar />
       <Certifications />
+      <MediumHighlights />
       <EducationTimeline />
       <ContactSection />
       <Footer />

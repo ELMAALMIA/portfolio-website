@@ -37,7 +37,7 @@ export function FloatingNav() {
         scrolled ? "glass shadow-lg" : "bg-transparent"
       )}
     >
-      <Link href="/" className="font-heading text-lg tracking-wide text-primary-foreground">
+      <Link href="/" className="font-heading text-lg tracking-wide text-white hover:text-primary transition-colors">
         AYB
       </Link>
       <nav className="hidden items-center gap-6 md:flex">

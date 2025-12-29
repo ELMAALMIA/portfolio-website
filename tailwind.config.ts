@@ -18,11 +18,15 @@ const config: Config = {
         foreground: "hsl(var(--foreground))",
         primary: {
           DEFAULT: "#0A548C",
-          foreground: "#F9FAFB"
+          foreground: "#F9FAFB",
+          light: "#0EA5E9",
+          dark: "#083D6B"
         },
         accent: {
-          DEFAULT: "#4C1D95",
-          foreground: "#F9FAFB"
+          DEFAULT: "#0EA5E9",
+          foreground: "#F9FAFB",
+          light: "#38BDF8",
+          dark: "#0284C7"
         }
       },
       boxShadow: {
