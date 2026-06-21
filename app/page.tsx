@@ -1,5 +1,3 @@
-"use client";
-
 import { Hero } from "@/components/hero";
 import { ExperienceTimeline } from "@/components/experience-timeline";
 import { ProjectShowcase } from "@/components/project-showcase";
@@ -9,18 +7,13 @@ import { Certifications } from "@/components/certifications";
 import { EducationTimeline } from "@/components/education-timeline";
 import { ContactSection } from "@/components/contact-section";
 import { Footer } from "@/components/footer";
-import { motion } from "framer-motion";
+import { AnimatedDivider } from "@/components/animated-divider";
 
 export default function Home() {
   return (
-    <main className="relative flex flex-col gap-16 pb-12">
+    <main id="main-content" className="relative flex flex-col gap-16 pb-12">
       <Hero />
-      <motion.hr
-        className="mx-auto h-px w-full max-w-5xl border-0 bg-gradient-to-r from-transparent via-slate-700 to-transparent"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.4, duration: 0.8 }}
-      />
+      <AnimatedDivider />
       <ExperienceTimeline />
       <ProjectShowcase />
       <SkillRadar />

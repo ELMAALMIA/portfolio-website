@@ -8,7 +8,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "deploy": "next build && next export",
+    "deploy": "next build",
+    "build:docker": "BUILD_STANDALONE=true next build",
     "format": "prettier --write ."
   },
   "dependencies": {

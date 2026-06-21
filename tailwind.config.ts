@@ -11,26 +11,36 @@ const config: Config = {
     extend: {
       fontFamily: {
         sans: ["var(--font-inter)"],
-        heading: ["var(--font-sora)"]
+        heading: ["var(--font-sora)"],
+        mono: ["var(--font-jetbrains)"]
       },
       colors: {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "#0A548C",
-          foreground: "#F9FAFB",
-          light: "#0EA5E9",
-          dark: "#083D6B"
+          DEFAULT: "#F59E0B",
+          foreground: "#0F172A",
+          light: "#FBBF24",
+          dark: "#D97706"
         },
         accent: {
-          DEFAULT: "#0EA5E9",
+          DEFAULT: "#3B82F6",
           foreground: "#F9FAFB",
-          light: "#38BDF8",
-          dark: "#0284C7"
+          light: "#60A5FA",
+          dark: "#2563EB"
+        },
+        java: {
+          orange: "#F59E0B",
+          red: "#EF4444",
+          kotlin: "#7C3AED"
         }
       },
       boxShadow: {
-        glow: "0 0 35px rgba(10, 84, 140, 0.35)"
+        glow: "0 0 40px rgba(245, 158, 11, 0.2)",
+        "glow-accent": "0 0 40px rgba(59, 130, 246, 0.15)"
+      },
+      backgroundImage: {
+        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))"
       }
     }
   },
@@ -38,4 +48,3 @@ const config: Config = {
 };
 
 export default config;
-

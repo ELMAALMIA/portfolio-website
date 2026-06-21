@@ -1,10 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'standalone',
-  experimental: {
-    typedRoutes: true
-  },
+  output: process.env.BUILD_STANDALONE === 'true' ? 'standalone' : 'export',
   images: {
+    unoptimized: process.env.BUILD_STANDALONE !== 'true',
     remotePatterns: [
       {
         protocol: "https",

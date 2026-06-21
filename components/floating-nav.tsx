@@ -9,8 +9,10 @@ import { Menu, X } from "lucide-react";
 const sections = [
   { id: "experience", label: "Experience" },
   { id: "projects", label: "Projects" },
-  { id: "articles", label: "Articles" },
-  { id: "certifications", label: "Certifications" },
+  { id: "skills", label: "Skills" },
+  { id: "certifications", label: "Certs" },
+  { id: "articles", label: "Writing" },
+  { id: "education", label: "Education" },
   { id: "contact", label: "Contact" }
 ];
 
@@ -33,39 +35,42 @@ export function FloatingNav() {
   return (
     <header
       className={cn(
-        "fixed inset-x-0 top-4 z-50 mx-auto flex max-w-6xl items-center justify-between rounded-full px-6 py-3 transition-all",
-        scrolled ? "glass shadow-lg" : "bg-transparent"
+        "fixed inset-x-0 top-3 z-50 mx-auto flex max-w-5xl items-center justify-between rounded-xl px-5 py-2.5 transition-all",
+        scrolled ? "border border-slate-800/50 bg-slate-950/80 backdrop-blur-xl shadow-lg" : "bg-transparent"
       )}
     >
-      <Link href="/" className="font-heading text-lg tracking-wide text-white hover:text-primary transition-colors">
-        AYB
+      <Link href="/" className="code-text text-sm tracking-wider text-primary hover:text-primary-light transition-colors">
+        AEM
       </Link>
-      <nav className="hidden items-center gap-6 md:flex">
+
+      <nav className="hidden items-center gap-1 md:flex">
         {sections.map((section) => (
           <a
             key={section.id}
             href={`#${section.id}`}
-            className="text-sm font-medium text-slate-200 transition hover:text-white"
+            className="rounded-md px-2.5 py-1.5 text-xs font-medium text-slate-400 transition hover:bg-slate-800/40 hover:text-white"
           >
             {section.label}
           </a>
         ))}
       </nav>
+
       <button
-        className="md:hidden"
+        className="md:hidden rounded-md p-1.5 hover:bg-slate-800/40 transition"
         type="button"
         onClick={() => setOpen((prev) => !prev)}
         aria-label="Toggle navigation"
       >
-        {open ? <X className="h-6 w-6 text-slate-200" /> : <Menu className="h-6 w-6 text-slate-200" />}
+        {open ? <X className="h-5 w-5 text-slate-300" /> : <Menu className="h-5 w-5 text-slate-300" />}
       </button>
+
       {open && (
-        <nav className="absolute right-4 top-16 flex w-48 flex-col gap-3 rounded-2xl bg-slate-900/95 p-4 shadow-xl md:hidden">
+        <nav className="absolute right-3 top-14 flex w-44 flex-col gap-0.5 rounded-xl border border-slate-800/50 bg-slate-950/95 backdrop-blur-xl p-2 shadow-xl md:hidden">
           {sections.map((section) => (
             <a
               key={section.id}
               href={`#${section.id}`}
-              className="text-sm font-medium text-slate-200 transition hover:text-white"
+              className="rounded-md px-3 py-2 text-xs font-medium text-slate-300 transition hover:bg-slate-800/40 hover:text-white"
               onClick={() => setOpen(false)}
             >
               {section.label}
@@ -76,4 +81,3 @@ export function FloatingNav() {
     </header>
   );
 }
-

@@ -18,7 +18,15 @@ if [ ! -f .env.production ]; then
     echo -e "${YELLOW}⚠️  Warning: .env.production not found${NC}"
     echo "Creating from env.example..."
     cp env.example .env.production
-    echo -e "${YELLOW}Please update .env.production with your actual values${NC}"
+    echo -e "${YELLOW}Please update .env.production with your actual values (including EmailJS keys for contact form)${NC}"
+fi
+
+# Load .env.production so NEXT_PUBLIC_* are available as build args (Next.js inlines them at build time)
+if [ -f .env.production ]; then
+    echo -e "${GREEN}📄 Loading .env.production for build...${NC}"
+    set -a
+    . ./.env.production
+    set +a
 fi
 
 # Pull latest changes
@@ -48,7 +56,6 @@ else
     docker-compose logs portfolio
     exit 1
 fi
-
 # Show logs
 echo -e "${GREEN}📋 Recent logs:${NC}"
 docker-compose logs --tail=20 portfolio
@@ -56,4 +63,5 @@ docker-compose logs --tail=20 portfolio
 echo -e "${GREEN}✅ Deployment complete!${NC}"
 echo -e "${YELLOW}💡 To view logs: docker-compose logs -f portfolio${NC}"
 echo -e "${YELLOW}💡 To check status: docker ps${NC}"
+
 

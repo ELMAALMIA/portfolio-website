@@ -15,6 +15,7 @@ export interface Project {
   tech: string[];
   links: { label: string; href: string }[];
   period?: string;
+  category?: "java" | "kotlin" | "ai" | "fullstack";
 }
 
 export interface Article {
@@ -37,15 +38,15 @@ export interface Certification {
 
 export const hero = {
   name: "Ayoub El Maalmi",
-  headline: "Software Engineer | AI Integrator | Cloud-Native Architect",
+  headline: "Fullstack Developer | Java / Kotlin | Spring Boot",
   summary:
-    "I engineer resilient platforms that blend Java/Spring backends, AI-driven experiences, and cloud-native automation. My focus is building systems that balance speed, safety, and clarity for cross-functional teams.",
+    "Fullstack Java/Kotlin Developer with hands-on experience building backend services and preparing applications for cloud environments. Focused on delivering reliable and scalable solutions through clean code and close collaboration with teams.",
   contact: {
     email: "elmaalmiayoub@gmail.com",
     phone: "+212 6 16 24 24 62",
-    location: "Meknes, Morocco"
+    location: "Rabat, Morocco"
   },
-  cvUrl: "/cv.pdf", // Add your CV file to the public folder
+  cvUrl: "/Ayoub_EL_MAALMI_Software_Engineer_Java_Kotlin_Spring.pdf",
   socials: [
     { label: "LinkedIn", href: "https://www.linkedin.com/in/ayoub-el-maalmi-8b274a1a1/" },
     { label: "GitHub", href: "https://github.com/ELMAALMIA" },
@@ -55,186 +56,236 @@ export const hero = {
 
 export const experiences: Experience[] = [
   {
-    company: "Oracle — Java Management Service",
-    role: "Research Assistant (Automation & Reporting)",
-    location: "Casablanca-Settat, Morocco",
+    company: "2SIS",
+    role: "Fullstack Developer",
+    location: "Remote",
+    type: "Freelance",
+    period: "Oct 2025 – Present",
+    achievements: [
+      "Built a mobile application with shared business logic using Kotlin Multiplatform (KMM), ensuring consistency and scalability across platforms.",
+      "Architected a PSP integration handling 1,000+ transactions daily with a 99.9% success rate through rigorous error-management.",
+      "Worked with stakeholders to improve and maintain a real-world car reservation system."
+    ],
+    stack: ["Java", "Spring Boot", "PostgreSQL", "REST APIs", "Kotlin", "KMM", "Git", "CI/CD"]
+  },
+  {
+    company: "Oracle — Java Platform",
+    role: "Software Engineer",
+    location: "Casablanca, Morocco",
     type: "Internship",
     period: "Feb 2025 – Aug 2025",
     achievements: [
-      "Built a Dropwizard service orchestrated by Jenkins to automate HTML/PDF usage reports with Chart.js visualisations, cutting processing time by 75%.",
-      "Delivered a custom Jenkins UI so engineers can parameterise OCI data collection and trigger multi-region workflows on demand.",
-      "Provisioned infrastructure with Terraform on OCI while meeting Oracle security controls, shipping documentation, training, and support playbooks.",
-      "Updated Oracle LiveLabs workshops, improving developer guidance and hands-on cloud experience."
+      "Automated JMS product reporting using Java and Spring Boot, reducing manual effort by 90% and providing leadership with real-time KPI visibility on OCI.",
+      "Engineered a JMS-based data pipeline for automated ingestion and transformation, eliminating manual data entry errors and ensuring data integrity across environments.",
+      "Developed an interactive dashboard using Chart.js to allow stakeholders to visualise and extract actionable business insights from JMS usage data.",
+      "Deployed containerised microservices to OCI production environments using Terraform for Infrastructure as Code (IaC)."
     ],
-    stack: ["Dropwizard", "Java", "Jenkins", "Chart.js", "OCI", "Terraform", "Oracle DB", "Python"]
-  },
-  {
-    company: "Upwork",
-    role: "Software Developer (Freelance)",
-    location: "Remote",
-    type: "Freelance",
-    period: "Sep 2023 – Sep 2024",
-    achievements: [
-      "Delivered cross-platform mobile apps (Flutter, React Native, Kotlin) with tailored UX and rapid release cycles for global clients.",
-      "Implemented end-to-end automation using Playwright, Puppeteer, and WebdriverIO to guarantee stability across devices.",
-      "Led client workshops to clarify requirements, estimate effort, and run continuous delivery without scope drift."
-    ],
-    stack: ["Flutter", "Kotlin", "React Native", "React", "Playwright", "Puppeteer", "REST APIs", "CI/CD"]
+    stack: ["Java", "Spring Boot", "Python", "Shell", "JavaScript", "Chart.js", "Oracle DB", "Jenkins", "OCI", "Terraform"]
   },
   {
     company: "OkayEnergy",
-    role: "Full-Stack Developer",
+    role: "Fullstack Developer",
     location: "Meknes, Morocco",
     type: "Internship",
     period: "Apr 2023 – May 2023",
     achievements: [
-      "Engineered a budget planning platform with React/Redux and a hardened Spring Boot API, improving financial data accuracy.",
-      "Optimised PostgreSQL queries and implemented caching, reducing response times by 35%.",
-      "Introduced CI/CD and peer reviews to increase release confidence and minimise production regressions."
+      "Developed a mobile application for monitoring and simulating budgets related to gas stations using Kotlin and Spring Boot.",
+      "Collaborated with non-technical stakeholders to translate business needs into functional application features."
     ],
-    stack: ["React", "Redux", "Spring Boot", "REST", "PostgreSQL", "JUnit", "Jest", "AWS"]
+    stack: ["Java", "Spring Boot", "Kotlin", "XML", "React"]
   },
   {
     company: "2R Flèche",
-    role: "Web Developer",
-    location: "Meknes, Morocco",
+    role: "Backend Java Developer",
+    location: "Remote",
     type: "Internship",
     period: "Apr 2022 – Jul 2022",
     achievements: [
-      "Shipped a full-stack e-commerce platform with catalogue, checkout, and analytics dashboards.",
-      "Applied SEO and performance tuning to grow organic traffic by 55% and orders by 150%.",
-      "Shaped the UX architecture and optimised load times through caching and asset optimisation."
+      "Developed RESTful backend services for an e-commerce platform and handled deployment on AWS.",
+      "Collaborated with the team to improve API reliability, maintainability, and deployment stability."
     ],
-    stack: ["ASP.NET Core", "Blazor", "C#", "JavaScript", "MySQL", "Azure", "SEO"]
-  },
-  {
-    company: "Provincial Directorate of Agriculture",
-    role: "Full-Stack Developer",
-    location: "Meknes, Morocco",
-    type: "Internship",
-    period: "Jul 2020",
-    achievements: [
-      "Designed a multi-platform absence management system (Laravel, React, Flutter) with role-based workflows and interactive calendars.",
-      "Automated approval processes and HR reporting, reducing manual effort across departments."
-    ],
-    stack: ["Laravel", "React", "Flutter", "MySQL", "REST APIs", "Docker"]
+    stack: ["Java", "AWS", "REST APIs", "MySQL", "JWT"]
   }
 ];
 
 export const projects: Project[] = [
   {
+    title: "Morocco Tourism App",
+    period: "2025",
+    description:
+      "Fullstack tourism platform with a microservices-based Java backend exposing REST APIs, a React frontend, and AI-powered content assistance via LLM APIs.",
+    highlights: [
+      "Designed a microservices architecture with Spring Boot, ensuring loose coupling and independent deployability.",
+      "Integrated LLM APIs through a Python FastAPI gateway for AI-powered content generation and recommendations.",
+      "Containerised all services with Docker and orchestrated with Nginx for production-ready deployment."
+    ],
+    tech: ["Java", "Spring Boot", "REST APIs", "PostgreSQL", "Python", "FastAPI", "LLM APIs", "React", "Docker", "Nginx"],
+    links: [
+      { label: "Live Demo", href: "https://assad-tourist-app-mvp.vercel.app/" },
+  
+    ],
+    category: "java"
+  },
+  {
     title: "TastyAI — Intelligent Recipe Generator",
     period: "Sep 2024 – Jan 2025",
     description:
-      "A web app that produces personalised recipes using a multi-LLM orchestration layer with automated fallbacks.",
+      "Spring Boot backend orchestrating multiple LLMs (OpenAI, Gemini, Mistral) with automated fallbacks, paired with a React/TypeScript frontend.",
     highlights: [
-      "Co-ordinated OpenAI, Google Gemini, and Mistral outputs with consistency checks and fallback logic to guarantee answers.",
-      "Implemented real-time state management to track pantry ingredients, preferences, and recipe history client-side.",
-      "Set up CI/CD and observability pipelines for Netlify deployments with rollout metrics and alerts."
+      "Built a Java/Spring Boot service layer to coordinate LLM outputs with consistency checks and fallback logic.",
+      "Implemented Redis caching for API responses, reducing LLM call costs and improving response times.",
+      "Set up CI/CD and observability pipelines for deployments with rollout metrics and alerts."
     ],
     tech: ["Java", "Spring Boot", "TypeScript", "React", "LLM APIs", "Redis", "Netlify", "CI/CD"],
     links: [
       { label: "Live Demo", href: "https://tastyai.netlify.app/" },
       { label: "Source Code", href: "https://github.com/ELMAALMIA/ws-recipe" }
-    ]
+    ],
+    category: "java"
+  },
+  {
+    title: "Custom Java Testing Framework",
+    period: "2024",
+    description:
+      "Lightweight testing framework built from scratch using Java annotations and reflection to discover, execute, and report on tests.",
+    highlights: [
+      "Leveraged Java Reflection API and custom annotations to auto-discover and execute test methods at runtime.",
+      "Implemented test lifecycle hooks (@BeforeEach, @AfterEach) and assertion utilities without external dependencies.",
+      "Generated structured test reports with pass/fail summaries, execution times, and stack traces."
+    ],
+    tech: ["Java", "Reflection API", "Annotations", "Maven", "Unit Testing"],
+    links: [
+      { label: "Source Code", href: "https://github.com/ELMAALMIA/Simple-Test-Framework-" }
+    ],
+    category: "java"
   },
   {
     title: "Salesforce AI Assistant — Lead Scoring & Smart Emails",
     period: "Sep 2024",
     description:
-      "AI-powered Salesforce integration that prioritises leads and drafts personalised outreach in seconds.",
+      "AI-powered Salesforce integration that prioritises leads and drafts personalised outreach, with a backend REST gateway handling secure data exchange.",
     highlights: [
       "Automated lead scoring with CRM signals to surface high-value opportunities directly inside Salesforce.",
       "Generated contextual emails via OpenAI using lead metadata (name, company, latest interactions).",
-      "Secured data exchange with OAuth 2.0 between Apex, Flows, and a Node.js REST gateway."
+      "Secured data exchange with OAuth 2.0 between Apex, Flows, and a REST gateway."
     ],
     tech: ["Salesforce", "Apex", "Node.js", "OpenAI API", "OAuth 2.0", "LWC", "CI/CD"],
-    links: []
+    links: [],
+    category: "ai"
   },
   {
     title: "aiL — Multi-Modal Authentication Platform",
     period: "May 2024 – Jun 2024",
     description:
-      "Mobile application combining face and voice recognition with near-real-time inference for secure verification.",
+      "Mobile application combining face and voice recognition with near-real-time inference for secure biometric verification.",
     highlights: [
       "Built a streaming pipeline to capture, process, and validate biometric signatures on-device.",
       "Achieved 94% accuracy using TensorFlow models optimised for mobile deployment.",
-      "Crafted a guided onboarding flow with Expo and secured REST APIs for enrolment and validation."
+      "Designed secured REST APIs following clean architecture principles for enrolment and validation."
     ],
     tech: ["React Native", "Expo", "Flask", "TensorFlow", "Python", "Docker"],
     links: [
       { label: "Mobile Repo", href: "https://github.com/ELMAALMIA/aiL" },
-      {
-        label: "Backend Repo",
-        href: "https://github.com/Amine-H-Filali/-Authentication-App-Face-Voice-"
-      }
-    ]
+      { label: "Backend Repo", href: "https://github.com/Amine-H-Filali/-Authentication-App-Face-Voice-" }
+    ],
+    category: "ai"
   },
   {
     title: "UML Generator — Java Reverse Engineering",
     period: "Jan 2024",
     description:
-      "Desktop utility that translates Java projects into interactive UML diagrams without external libraries.",
+      "Pure Java desktop utility that translates Java projects into interactive UML class diagrams using Reflection API — zero external libraries.",
     highlights: [
       "Parsed projects with Java Reflection to extract classes, interfaces, attributes, and relationships on the fly.",
       "Visualised diagrams in Swing with live filtering and exportable formats.",
-      "Optimised memory usage to handle large codebases smoothly."
+      "Optimised memory usage to handle large codebases with hundreds of classes smoothly."
     ],
     tech: ["Java", "Swing", "Reflection API", "Design Patterns"],
-    links: [{ label: "Source Code", href: "https://github.com/ELMAALMIA/UML-Diagrams-Generator" }]
+    links: [{ label: "Source Code", href: "https://github.com/ELMAALMIA/UML-Diagrams-Generator" }],
+    category: "java"
   },
   {
     title: "E-Supply-Online — Public Procurement Management",
     period: "Jan 2022 – May 2022",
     description:
-      "Web platform to manage procurement cycles from RFIs to invoice tracking with full partner transparency.",
+      "Web platform managing procurement cycles from RFIs to invoice tracking with workflow automation and reporting dashboards.",
     highlights: [
-      "Implemented Laravel MVC modules for workflow automation, notifications, and reporting dashboards.",
+      "Implemented MVC modules for workflow automation, notifications, and reporting dashboards.",
       "Modelled the solution with the Unified Process and UML artefacts to align stakeholders.",
       "Improved MySQL performance and caching strategies to support concurrent usage."
     ],
     tech: ["Laravel", "PHP", "MySQL", "jQuery", "JavaScript"],
-    links: []
+    links: [],
+    category: "fullstack"
   }
 ];
 
 export const articles: Article[] = [
   {
-    title: "Practical Debugging Techniques for Java Developers",
+    title: "End-to-End Testing in Hexagonal Architecture: The Complete Testing Strategy",
     summary:
-      "Three debugging strategies—conditional breakpoints, profiling, post-mortem analysis—to unpack complex Spring and Hibernate behaviour.",
-    url: "https://medium.com/p/eyPjBuij",
-    views: 76,
-    reads: 50,
-    published: "17 Oct 2025"
+      "A layered testing approach for Java applications — from ports and adapters to integration journeys spanning domains.",
+    url: "https://medium.com/@ayoubelmaalmi/end-to-end-testing-in-hexagonal-architecture-the-complete-testing-strategy-e40bf704f359",
+    views: 353,
+    reads: 357,
+    published: "14 Aug 2025"
   },
   {
     title: "Event-Driven Hexagonal Architecture: Integrating RabbitMQ with Clean Architecture Principles",
     summary:
-      "How to blend hexagonal architecture and event-driven patterns to keep services decoupled while scaling workloads.",
-    url: "https://medium.com/p/event-driven-hexagonal-architecture",
-    views: 144,
-    reads: 61,
+      "How to blend hexagonal architecture and event-driven patterns to keep Java services decoupled while scaling workloads.",
+    url: "https://medium.com/@ayoubelmaalmi/event-driven-hexagonal-architecture-integrating-rabbitmq-with-clean-architecture-principles-d9a5aaa2cd4e",
+    views: 275,
+    reads: 188,
     published: "13 Sep 2025"
-  },
-  {
-    title: "End-to-End Testing in Hexagonal Architecture: The Complete Testing Strategy",
-    summary:
-      "A layered testing approach to guarantee the entire hexagon works—from ports and adapters to journeys spanning domains.",
-    url: "https://medium.com/p/e4i2AWFK",
-    views: 227,
-    reads: 197,
-    published: "14 Aug 2025"
   },
   {
     title: "Implementing Hexagonal Architecture in Java: Breaking Free from Framework Tyranny",
     summary:
-      "Lessons from migrating a 299K LOC Spring monolith to a domain-driven architecture with clean boundaries.",
-    url: "https://medium.com/p/eGaTbJdA",
-    views: 237,
-    reads: 125,
+      "Lessons from migrating a 299K LOC Spring monolith to a domain-driven hexagonal architecture with clean boundaries.",
+    url: "https://medium.com/@ayoubelmaalmi/implementing-hexagonal-architecture-in-java-breaking-free-from-framework-tyranny-273cfedbc735",
+    views: 284,
+    reads: 130,
     published: "14 Aug 2025"
+  },
+  {
+    title: "Practical Debugging Techniques for Java Developers",
+    summary:
+      "Three debugging strategies — conditional breakpoints, profiling, post-mortem analysis — to unpack complex Spring and Hibernate behaviour.",
+    url: "https://medium.com/@ayoubelmaalmi/practical-debugging-techniques-for-java-developers-c0a673ed4bea",
+    views: 210,
+    reads: 94,
+    published: "17 Oct 2025"
+  },
+  {
+    title: "Setting Up an OCI Instance as a Jenkins Node",
+    summary:
+      "Step-by-step guide to configuring Oracle Cloud Infrastructure instances as Jenkins build agents for CI/CD pipelines.",
+    url: "https://medium.com/@ayoubelmaalmi/setting-up-an-oci-instance-as-a-jenkins-node-0fec4b0758e0",
+    views: 129,
+    reads: 20,
+    published: "1 Dec 2025"
+  },
+  {
+    title: "Building a Custom Java Test Framework and Running It in GitHub Actions",
+    summary:
+      "Creating a lightweight testing framework from scratch using Java Reflection and annotations, then integrating it into CI/CD workflows.",
+    url: "https://medium.com/@ayoubelmaalmi/building-a-custom-java-test-framework-and-running-it-in-github-actions-e968bffc7ffc",
+    views: 74,
+    reads: 19,
+    published: "28 Dec 2025"
   }
+, {
+  title: "Setting Up a Big Data Architecture with Spring Boot and MongoDB Sharding (in french)",
+  summary:
+    "Designing and implementing a scalable Big Data architecture using Spring Boot and MongoDB Sharding, covering cluster setup, data distribution, and performance considerations.",
+  url: "https://medium.com/@ayoubelmaalmi/mise-en-place-dune-architecture-big-data-avec-spring-boot-et-mongodb-sharding-94f72fb80666",
+  views: 50,
+  reads: 50,
+  published: "04 Jan 2025"
+}
+
+
 ];
 
 export const certifications: Certification[] = [
@@ -243,94 +294,71 @@ export const certifications: Certification[] = [
     issuer: "Oracle",
     issued: "Feb 2025",
     expiry: "Feb 2027",
-    url: "https://catalog-education.oracle.com/pls/certview/sharebadge?id=placeholder",
+    url: "https://catalog-education.oracle.com/ords/certview/sharebadge?id=4CED6235E812F8E0B098C815D719F8F607D5CD4F5C3E1F9C7F99947CAE5A3272",
     skills: ["OCI", "Cloud Architecture", "Security"]
-  },
-  {
-    title: "Software Engineer Intern Certificate",
-    issuer: "HackerRank",
-    issued: "Mar 2024",
-    skills: ["Algorithms", "Problem Solving"]
   },
   {
     title: "Foundations of Project Management",
     issuer: "Google",
     issued: "Feb 2024",
+    url: "https://www.coursera.org/account/accomplishments/verify/FK5UP9NWH3AL",
     skills: ["Project Planning", "Stakeholder Management"]
   },
   {
-    title: "Java (Basic) Certificate",
+    title: "The Complete Android + Kotlin Developer Course™",
+    issuer: "Udemy",
+    issued: "Nov 2023",
+    url: "https://www.udemy.com/certificate/UC-c22ea441-ff75-4fb1-8d72-caeb7b9c0cf0/",
+    skills: ["Kotlin", "KMM", "Android", "Kotlin Multiplatform"]
+  },
+  {
+    title: "Software Engineer Intern Certificate",
     issuer: "HackerRank",
     issued: "Nov 2023",
+    url: "https://www.hackerrank.com/certificates/b56ee27642ad",
     skills: ["Java", "Object-Oriented Design"]
   },
-  {
-    title: "Git Essential Training: The Basics",
-    issuer: "LinkedIn Learning",
-    issued: "Nov 2023",
-    skills: ["Git", "Version Control"]
-  },
-  {
-    title: "Java: Testing with JUnit",
-    issuer: "LinkedIn Learning",
-    issued: "Nov 2023",
-    skills: ["JUnit", "Testing"]
-  },
+
   {
     title: "Java: Mastering Multithreading",
     issuer: "LinkedIn Learning",
     issued: "Nov 2023",
-    skills: ["Concurrency", "Java"]
+    url: "https://www.linkedin.com/learning/certificates/55479dbc9f416dfe0288c651dbb42c6f5bc7e481406fb79a008f22a5a4dfaa2b?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3Bx54y9qJ6SQmAyqTQgKkwiw%3D%3D",
+    skills: ["Concurrency", "Java", "Performance"]
   }
 ];
 
-export const stats = {
-  medium: {
-    monthly: {
-      views: 36,
-      reads: 20,
-      presentations: 77
-    },
-    lifetime: {
-      views: 237,
-      reads: 197,
-      topArticle: "Implementing Hexagonal Architecture in Java"
-    }
-  },
-  linkedIn: {
-    profileViews: 341,
-    postImpressions: 1523,
-    searchAppearances: 90
-  }
+export const coreSkills = {
+  "Backend Development": ["Java", "Kotlin", "Spring / Spring Boot", "Spring Ecosystem", "RESTful APIs"],
+  "Frontend Development": ["React", "TypeScript", "JavaScript", "Tailwind CSS"],
+  Databases: ["PostgreSQL", "MySQL", "MongoDB", "Oracle Database"],
+  "DevOps & Quality": ["OCI", "Jenkins", "Git", "Docker", "CI/CD Pipelines", "JUnit", "Mockito"]
 };
 
-export const skills = {
-  backend: ["Java", "Kotlin", "Spring Boot", "Dropwizard", "Node.js", "Quarkus"],
-  frontend: ["React", "Angular", "TypeScript", "Next.js", "React Native"],
-  cloud: ["OCI", "Azure", "AWS", "Terraform", "Docker", "Kubernetes", "Jenkins"],
-  data: ["PostgreSQL", "MySQL", "MongoDB", "Redis", "DB2"],
-  quality: ["JUnit", "Mockito", "Playwright", "Puppeteer", "TDD"],
-  languages: ["Arabic (Native)", "French (B2)", "English (B2)"]
+export const technicalKnowledge = {
+  "Languages & Frameworks": ["Python", "Kotlin Multiplatform (KMM)", "Angular", "FastAPI", "React Native"],
+  "Databases & Storage": ["Firebase", "Redis"],
+  "Cloud & Platforms": ["AWS", "Cloud Fundamentals"],
+  Concepts: ["Agile/Scrum", "Microservices", "Hexagonal Architecture", "Responsive Design"]
 };
 
 export const education = [
   {
-    degree: "Master’s Degree — Software Quality",
-    school: "Université Sidi Mohammed Ben Abdellah, Fes",
+    degree: "Master's Degree in Software Quality Engineering (Bac+5)",
+    school: "USMBA, Fez, Morocco",
     period: "2023 – 2025",
     mention: "Graduated with honours"
   },
   {
-    degree: "Professional Bachelor — Information Systems & Communication",
-    school: "École Supérieure de Technologie de Meknès",
+    degree: "Bachelor's Degree in Information Systems Development (Bac+3)",
+    school: "EST, Meknes, Morocco",
     period: "2022 – 2023",
     mention: "Graduated with honours"
   },
   {
-    degree: "University Diploma of Technology — Computer Science",
-    school: "École Supérieure de Technologie de Meknès",
+    degree: "University Diploma of Technology in Computer Engineering (Bac+2)",
+    school: "EST, Meknes, Morocco",
     period: "2020 – 2022",
     mention: "Graduated with honours"
   }
 ];
-
